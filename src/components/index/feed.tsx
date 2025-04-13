@@ -1,5 +1,5 @@
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { Button } from "./ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { Button } from "../ui/button";
 import {
   EllipsisVertical,
   ThumbsUp,
@@ -7,7 +7,7 @@ import {
   Rss,
   Send,
 } from "lucide-react";
-import { Input } from "./ui/input";
+import { Input } from "../ui/input";
 type FeedProps = {
   avatar_url: string;
   name: string;

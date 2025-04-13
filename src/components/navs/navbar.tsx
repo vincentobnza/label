@@ -1,9 +1,9 @@
 import { Bell } from "lucide-react";
-import { Notification } from "./Notification";
-import { ToggleTheme } from "./Toggle-theme";
-import { Input } from "./ui/input";
+import { Notification } from "./notification";
+import { ToggleTheme } from "../toggle-theme";
+import { Input } from "../ui/input";
 import { NavLink } from "react-router-dom";
-import { Credits } from "./Credits";
+import { Credits } from "./credits";
 import { useLocation } from "react-router-dom";
 
 type NavbarItems = {

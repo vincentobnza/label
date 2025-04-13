@@ -1,4 +1,4 @@
-import { Feed } from "@/components/Feed";
+import { Feed } from "@/components/index/feed";
 
 export const Home = () => {
   return (

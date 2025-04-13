@@ -1,5 +1,5 @@
-import { MessageList } from "@/components/MessageList";
-import { MessagePanel } from "@/components/MessagePanel";
+import { MessageList } from "@/components/messages/message-list";
+import { MessagePanel } from "@/components/messages/message-panel";
 
 export const Messages = () => {
   return (

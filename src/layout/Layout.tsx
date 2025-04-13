@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
-import { Navbar } from "@/components/Navbar";
-import { Header } from "@/components/Header";
-import Sidebar from "@/components/Sidebar";
-import RightSidebar from "@/components/RightSidebar";
+import { Navbar } from "@/components/navs/navbar";
+import { Header } from "@/components/navs/header";
+import Sidebar from "@/components/index/sidebar";
+import RightSidebar from "@/components/index/right-sidebar";
 
 export function Layout() {
   return (

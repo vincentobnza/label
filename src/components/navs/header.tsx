@@ -1,6 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { PostDialog } from "./PostDialog";
-import { Button } from "./ui/button";
+import { PostDialog } from "../posts/post-dialog";
+import { Button } from "../ui/button";
 import { Image, SmilePlus, Headset, Video } from "lucide-react";
 
 export const Header = () => {
