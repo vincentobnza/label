@@ -1,6 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import { useState } from "react";
-import { Send } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Info, Send, Video, Phone } from "lucide-react";
+import { Button } from "../ui/button";
 
 const mockMessages = [
   {
@@ -29,7 +30,25 @@ const mockMessages = [
 export const MessagePanel = () => {
   const [messages, setMessages] = useState(mockMessages);
   const [newMessage, setNewMessage] = useState("");
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
 
+  const scrollToBottom = () => {
+    if (messagesEndRef.current && messagesContainerRef.current) {
+      // Option 1: Use scrollIntoView for smooth animation
+      messagesEndRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "end",
+      });
+    }
+  };
+  useEffect(() => {
+    const scrollTimer = setTimeout(() => {
+      scrollToBottom();
+    }, 50);
+
+    return () => clearTimeout(scrollTimer);
+  }, [messages]);
   const handleSendMessage = () => {
     if (newMessage.trim()) {
       setMessages([
@@ -53,7 +72,7 @@ export const MessagePanel = () => {
     <div className="w-full h-[86vh] bg-white dark:bg-slate-800 flex flex-col overflow-hidden ">
       {/* Fixed header */}
       <div className="w-full border-b border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 shadow-md">
-        <div className="p-4">
+        <div className="w-full flex justify-between items-center p-4">
           <div className="flex items-center gap-4">
             <Avatar className="h-10 w-10">
               <AvatarImage
@@ -71,11 +90,36 @@ export const MessagePanel = () => {
               </p>
             </div>
           </div>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="secondary"
+              size="icon"
+              className="p-1 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 "
+            >
+              <Phone strokeWidth={3} />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="p-1 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 "
+            >
+              <Video strokeWidth={3} />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="p-1 rounded-lg bg-slate-100 dark:bg-slate-600/40 hover:0g-gray-200 dark:hover:bg-slate-700"
+            >
+              <Info strokeWidth={3} />
+            </Button>
+          </div>
         </div>
       </div>
 
-      {/* Messages area - flexible height with scrolling */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-hide bg-gray-50 dark:bg-slate-800">
+      <div
+        ref={messagesContainerRef}
+        className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-hide bg-gray-50 dark:bg-slate-800"
+      >
         {messages.map((message) => (
           <div
             key={message.id}
@@ -140,6 +184,8 @@ export const MessagePanel = () => {
             )}
           </div>
         ))}
+
+        <div ref={messagesEndRef} />
       </div>
 
       {/* Fixed message input at bottom */}

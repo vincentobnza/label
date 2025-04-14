@@ -34,7 +34,7 @@ export const Navbar = () => {
     location.pathname.includes("/explore") ||
     location.pathname.includes("/notifications");
   return (
-    <nav className="sticky top-0 w-full p-3 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/40  flex justify-center items-center z-50 backdrop-blur-lg">
+    <nav className="sticky top-0 w-full p-3 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/20  flex justify-center items-center z-50 backdrop-blur-xl">
       <div className="w-full max-w-screen-2xl mx-auto flex items-center justify-between">
         <div className="flex items-center justify-center space-x-12">
           <NavLink

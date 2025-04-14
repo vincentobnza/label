@@ -44,14 +44,14 @@ const Sidebar = () => {
   const subscription = [
     {
       icon: CreditCard,
-      label: "Buy Subscription",
-      path: "/games",
+      label: "Billing",
+      path: "/billing",
       color: "#4f46e5",
     }, // Indigo
   ];
 
   return (
-    <div className="fixed left-0 top-14 h-[calc(100vh-40px)] p-6 flex flex-col gap-4 w-80 bg-white dark:bg-slate-900">
+    <div className="fixed left-0 top-14 h-[calc(100vh-40px)] p-6 flex flex-col gap-4 w-80 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800/60">
       <ul>
         <label className="text-xs opacity-70">Platform</label>
         {navItems.map((item) => (
@@ -104,7 +104,7 @@ const Sidebar = () => {
           >
             {({ isActive }) => (
               <div
-                className={`flex items-center gap-5 p-2 my-1 rounded cursor-pointer text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm ${
+                className={`flex items-center gap-5 p-2 my-1 rounded cursor-pointer text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm relative ${
                   isActive
                     ? "bg-slate-100 dark:bg-gradient-to-r dark:from-slate-800 dark:to-slate-900"
                     : ""

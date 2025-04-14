@@ -1,22 +1,18 @@
 import { Outlet } from "react-router-dom";
 import { Navbar } from "@/components/navs/navbar";
-import { Header } from "@/components/navs/header";
 import Sidebar from "@/components/index/sidebar";
-import RightSidebar from "@/components/index/right-sidebar";
 
-export function Layout() {
+export function SubscriptionLayout() {
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-slate-900">
       <Navbar />
       <div className="flex flex-1 overflow-hidden">
         <Sidebar />
-        <div className="mx-80 p-4 flex-1 space-y-4 flex flex-col overflow-hidden">
-          <Header />
-          <main className="flex-1 overflow-y-auto relative">
+        <div className="ml-80 p-4 flex-1 space-y-4 flex flex-col overflow-hidden">
+          <main className="flex-1 overflow-y-auto">
             <Outlet />
           </main>
         </div>
-        <RightSidebar />
       </div>
     </div>
   );

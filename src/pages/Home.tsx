@@ -1,10 +1,10 @@
-import { Feed } from "@/components/index/feed";
+import { FeedCard } from "@/components/index/feed-card";
 
 export const Home = () => {
   return (
-    <div className="space-y-4">
+    <section className="space-y-4">
       {DumpPost.map((post, index) => (
-        <Feed
+        <FeedCard
           key={index}
           avatar_url={post.avatar_url}
           name={post.name}
@@ -12,7 +12,7 @@ export const Home = () => {
           img={post.img}
         />
       ))}
-    </div>
+    </section>
   );
 };
 
@@ -72,3 +72,5 @@ const DumpPost = [
     description: "MGA  HANGALLLL!!!",
   },
 ];
+
+export default Home;

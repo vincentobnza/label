@@ -1,10 +1,12 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "../ui/button";
 import { LogOut } from "lucide-react";
+import { DotPatternCard } from "../patterns/dot-pattern";
 
 export const ProfileCard = () => {
   return (
-    <div className="w-full flex flex-col gap-6 py-8 px-5 bg-white dark:bg-slate-800/30 rounded border border-slate-200 dark:border-slate-800">
+    <div className="w-full flex flex-col gap-6 py-8 px-5 bg-white dark:bg-slate-800/30 rounded border border-slate-200 dark:border-slate-800 relative">
+      <DotPatternCard />
       <div className="flex items-center gap-6">
         <Avatar className="size-10">
           <AvatarImage

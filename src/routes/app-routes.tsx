@@ -1,9 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import { lazy } from "react";
-import { Layout } from "@/layout/Layout";
-import { Home } from "@/pages/home";
-import { MessageLayout } from "@/layout/MessageLayout";
-import { Messages } from "@/pages/messages";
+import { Layout } from "@/layout/layout";
+import { MessageLayout } from "@/layout/message-layout";
+import { SubscriptionLayout } from "@/layout/subscription-layout";
+
+const Home = lazy(() => import("@/pages/home"));
+const Messages = lazy(() => import("@/pages/messages"));
+const Subscription = lazy(() => import("@/pages/subscription"));
 
 const router = createBrowserRouter([
   {
@@ -13,6 +16,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        index: true,
       },
     ],
   },
@@ -23,6 +27,17 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Messages />,
+      },
+    ],
+  },
+
+  {
+    path: "/billing",
+    element: <SubscriptionLayout />,
+    children: [
+      {
+        path: "",
+        element: <Subscription />,
       },
     ],
   },

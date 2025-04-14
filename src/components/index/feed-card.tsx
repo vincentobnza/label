@@ -15,7 +15,7 @@ type FeedProps = {
   img?: string;
 };
 
-export const Feed = ({ avatar_url, name, description, img }: FeedProps) => {
+export const FeedCard = ({ avatar_url, name, description, img }: FeedProps) => {
   return (
     <div className="space-y-2">
       <div className="w-full max-w-screen-lg mx-auto flex flex-col gap-5 p-6 bg-white dark:bg-slate-800/30 rounded-lg border border-slate-200 dark:border-slate-800">
@@ -61,9 +61,13 @@ export const Feed = ({ avatar_url, name, description, img }: FeedProps) => {
               Comment
             </Button>
           </div>
-          <div className="flex items-center gap-4 pr-5">
-            <p className="text-xs opacity-70">1 Like</p>
-            <p className="text-xs opacity-70">0 Comments</p>
+          <div className="flex items-center gap-4 pr-5 font-semibold">
+            <p className="text-xs opacity-70 cursor-pointer hover:underline">
+              1 Like
+            </p>
+            <p className="text-xs opacity-70 cursor-pointer hover:underline">
+              0 Comments
+            </p>
           </div>
         </div>
       </div>
