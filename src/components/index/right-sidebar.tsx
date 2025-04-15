@@ -1,5 +1,5 @@
 import { FollowRequests } from "./follow-requests";
-import { ProfileCard } from "./profile-card";
+import { ProfileCard } from "../cards/profile-card";
 
 const RightSidebar = () => {
   return (

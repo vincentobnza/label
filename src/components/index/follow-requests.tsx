@@ -1,5 +1,5 @@
-import { FollowRequestCard } from "./follow-request-card";
-import { OverlayFade } from "../overlay-fade";
+import { FollowRequestCard } from "../cards/follow-request-card";
+import { OverlayFade } from "../theme/overlay-fade";
 import { Button } from "../ui/button";
 import { useQuery } from "@tanstack/react-query";
 

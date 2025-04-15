@@ -1,4 +1,4 @@
-import { DotPatternCard } from "@/components/patterns/dot-pattern";
+import { DotPatternCard } from "@/components/shared/dot-pattern";
 import { Outlet } from "react-router-dom";
 
 export const AuthLayout = () => {

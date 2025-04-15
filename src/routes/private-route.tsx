@@ -1,6 +1,6 @@
 import { Navigate } from "react-router-dom";
 import { useAuth } from "@/context/auth-context";
-import { Loading } from "@/components/page-loading/loading";
+import { Loading } from "@/components/shared/loading";
 import { useState, useEffect } from "react";
 
 const ProtectedRoute = ({ children }: any) => {

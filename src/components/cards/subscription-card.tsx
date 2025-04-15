@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import { Check } from "lucide-react";
-import { DotPatternCard } from "../patterns/dot-pattern";
+import { DotPatternCard } from "../shared/dot-pattern";
 
 type SubscriptionCardProps = {
   title: string;

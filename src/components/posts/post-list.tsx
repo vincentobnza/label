@@ -1,4 +1,4 @@
-import { PostCard } from "./post-card";
+import { PostCard } from "../cards/post-card";
 import { usePosts } from "@/hooks/usePosts";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Frown } from "lucide-react";

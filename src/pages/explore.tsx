@@ -1,5 +1,5 @@
 import { SearchBar } from "@/components/explore/search-bar";
-import { Section } from "@/components/index/section";
+import { Section } from "@/components/theme/section";
 import { Telescope } from "lucide-react";
 
 export const Explore = () => {

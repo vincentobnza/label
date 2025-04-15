@@ -1,5 +1,5 @@
 import { CreditCard } from "lucide-react";
-import { DotPatternCard } from "../patterns/dot-pattern";
+import { DotPatternCard } from "../shared/dot-pattern";
 
 type PaymentMethodCardProps = {
   type: string;

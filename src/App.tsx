@@ -1,8 +1,8 @@
 import { RouterProvider } from "react-router-dom";
-import { ThemeProvider } from "./components/theme-provider";
+import { ThemeProvider } from "./components/theme/theme-provider";
 import { router } from "./routes/app-routes";
 import { Suspense } from "react";
-import { Loading } from "./components/page-loading/loading";
+import { Loading } from "./components/shared/loading";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./services/queryClient";
 import { AuthProvider } from "./context/auth-context";

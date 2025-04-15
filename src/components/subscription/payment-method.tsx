@@ -1,4 +1,4 @@
-import { PaymentMethodCard } from "./pm-card";
+import { PaymentMethodCard } from "../cards/pm-card";
 
 export const PaymentMethod = () => {
   return (

@@ -1,4 +1,4 @@
-import { Section } from "@/components/index/section";
+import { Section } from "@/components/theme/section";
 import { PaymentMethod } from "@/components/subscription/payment-method";
 import { SubscriptionWrapper } from "@/components/subscription/subscription-wrapper";
 import { CreditCard } from "lucide-react";

@@ -1,7 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "../ui/button";
 import { LogOut } from "lucide-react";
-import { DotPatternCard } from "../patterns/dot-pattern";
+import { DotPatternCard } from "../shared/dot-pattern";
 
 export const ProfileCard = () => {
   return (

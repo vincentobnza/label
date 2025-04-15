@@ -1,6 +1,6 @@
 import { Bell } from "lucide-react";
 import { Notification } from "./notification";
-import { ToggleTheme } from "../toggle-theme";
+import { ToggleTheme } from "../theme/toggle-theme";
 import { Input } from "../ui/input";
 import { NavLink } from "react-router-dom";
 import { Credits } from "./credits";

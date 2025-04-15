@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Search } from "lucide-react";
 import { MessageFilter } from "./message-filter";
-import { OverlayFade } from "../overlay-fade";
+import { OverlayFade } from "../theme/overlay-fade";
 
 const mockContacts = [
   {

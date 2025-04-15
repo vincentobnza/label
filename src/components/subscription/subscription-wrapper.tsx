@@ -1,4 +1,4 @@
-import { SubscriptionCard } from "./subscription-card";
+import { SubscriptionCard } from "../cards/subscription-card";
 
 /**
  * SubscriptionWrapper component to display subscription details
