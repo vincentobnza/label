@@ -5,6 +5,7 @@ import { Input } from "../ui/input";
 import { NavLink } from "react-router-dom";
 import { Credits } from "./credits";
 import { useLocation } from "react-router-dom";
+import { NotificationBell } from "../notifications/notification-dialog";
 
 type NavbarItems = {
   name: string;
@@ -63,7 +64,7 @@ export const Navbar = () => {
               className="h-8 w-80 placeholder:text-sm placeholder:opacity-70"
             />
           )}
-          <Bell size={18} strokeWidth={3} className="opacity-80" />
+          <NotificationBell />
           <ToggleTheme />
         </div>
       </div>

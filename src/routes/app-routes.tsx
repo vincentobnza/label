@@ -4,7 +4,8 @@ import { Layout } from "@/layout/layout";
 import { MessageLayout } from "@/layout/message-layout";
 import { SubscriptionLayout } from "@/layout/subscription-layout";
 import { AuthLayout } from "@/layout/auth-layout";
-import ProtectedRoute from "./private-route";
+// import ProtectedRoute from "./private-route";
+import { RootLayout } from "@/layout/root-layout";
 
 const Login = lazy(() => import("@/pages/auth/login"));
 const Signup = lazy(() => import("@/pages/auth/signup"));
@@ -12,24 +13,37 @@ const Home = lazy(() => import("@/pages/home"));
 const Messages = lazy(() => import("@/pages/messages"));
 const Subscription = lazy(() => import("@/pages/subscription"));
 
+const Explore = lazy(() => import("@/pages/explore"));
+
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/feed",
     element: <Layout />,
     children: [
       {
-        path: "/",
-        element: (
-          <ProtectedRoute>
-            <Home />
-          </ProtectedRoute>
-        ),
+        path: "",
+        element: <Home />,
         index: true,
       },
     ],
   },
+
   {
-    path: "/messages",
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      {
+        path: "explore",
+        element: <Explore />,
+      },
+      {
+        path: "billing",
+        element: <Subscription />,
+      },
+    ],
+  },
+  {
+    path: "messages",
     element: <MessageLayout />,
     children: [
       {
@@ -39,16 +53,7 @@ const router = createBrowserRouter([
     ],
   },
 
-  {
-    path: "/billing",
-    element: <SubscriptionLayout />,
-    children: [
-      {
-        path: "",
-        element: <Subscription />,
-      },
-    ],
-  },
+  // AUTHENTICATION PAGES
 
   {
     path: "/auth",

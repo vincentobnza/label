@@ -13,41 +13,36 @@ import {
 
 const Sidebar = () => {
   const navItems = [
-    { icon: Home, label: "Feed", path: "/", color: "#4f46e5" }, // Indigo
-    { icon: Compass, label: "Explore", path: "/explore", color: "#0ea5e9" }, // Sky indigo
+    { icon: Home, label: "Feed", path: "/feed", color: "#4f46e5" },
+    { icon: Compass, label: "Explore", path: "/explore", color: "#0ea5e9" },
     {
       icon: Bell,
       label: "Notifications",
       path: "/notifications",
       color: "#f59e0b",
-    }, // Amber
+    },
     {
       icon: MessageSquare,
       label: "Messages",
       path: "/messages",
       color: "#10b981",
-    }, // Emerald
+    },
     {
       icon: Bookmark,
       label: "Bookmarks",
       path: "/bookmarks",
       color: "#8b5cf6",
-    }, // Violet
-    { icon: User, label: "Profile", path: "/profile", color: "#ef4444" }, // Red
+    },
+    { icon: User, label: "Profile", path: "/profile", color: "#ef4444" },
   ];
 
   const earnItems = [
-    { icon: Gamepad2, label: "Play Games", path: "/games", color: "#eed155" }, // yellow
-    { icon: Megaphone, label: "Watch Ads", path: "/ads", color: "#0ea5e9" }, // Sky indigo
+    { icon: Gamepad2, label: "Play Games", path: "/games", color: "#eed155" },
+    { icon: Megaphone, label: "Watch Ads", path: "/ads", color: "#0ea5e9" },
   ];
 
   const subscription = [
-    {
-      icon: CreditCard,
-      label: "Billing",
-      path: "/billing",
-      color: "#4f46e5",
-    }, // Indigo
+    { icon: CreditCard, label: "Billing", path: "/billing", color: "#4f46e5" },
   ];
 
   return (

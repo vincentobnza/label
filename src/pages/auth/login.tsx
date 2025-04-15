@@ -60,7 +60,7 @@ const Login = () => {
             link="signup"
             link_text="Sign up"
           />
-          <Login />
+          <LoginForm />
           <AuthProvidersButton />
         </div>
       </div>

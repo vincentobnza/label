@@ -24,7 +24,7 @@ export async function getPostById(id: string): Promise<Post | null> {
   return data as Post | null;
 }
 
-export async function createPost(post: Post): Promise<Post> {
+export async function createPost(post: { content: string }): Promise<Post> {
   const { data, error } = await supabase
     .from("posts")
     .insert(post)

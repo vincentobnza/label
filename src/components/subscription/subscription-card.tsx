@@ -37,7 +37,7 @@ export const SubscriptionCard = ({
             : "bg-white dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-900 border border-slate-200 dark:border-slate-700 shadow-sm"
         }`}
     >
-      {(popular || currentPlan) && <DotPatternCard />}
+      <DotPatternCard />
       {popular && (
         <div className="absolute -top-3 right-6 bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
           Recommended

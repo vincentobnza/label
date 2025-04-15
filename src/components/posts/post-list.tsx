@@ -1,16 +1,10 @@
-import { PostCard } from "./post-card"; // Import the memoized PostCard
-import { usePosts } from "@/components/hooks/usePosts";
-import { useIntersectionObserver } from "@uidotdev/usehooks";
+import { PostCard } from "./post-card";
+import { usePosts } from "@/hooks/usePosts";
 import { Skeleton } from "@/components/ui/skeleton";
+import { Frown } from "lucide-react";
 
 export const PostList = () => {
   const { data: posts, isLoading, isError, error } = usePosts();
-  const [ref, entry] = useIntersectionObserver({
-    threshold: 0,
-    root: null,
-    rootMargin: "0px",
-  });
-  const { isIntersecting } = entry || {};
 
   if (isLoading) {
     console.log("Loading posts...");
@@ -41,21 +35,28 @@ export const PostList = () => {
         ))
       ) : posts && posts.length > 0 ? (
         posts.map((post, index) => (
-          <div key={index} ref={index === posts.length - 1 ? ref : null}>
-            {isIntersecting && (
-              <PostCard
-                avatar_url={post.avatar_url || ""}
-                name={post.display_name || "Vincent Obenza"}
-                content={post.content}
-                img_url={post.image_url || ""}
-              />
-            )}
+          <div key={index}>
+            <PostCard
+              avatar_url={post.avatar_url || ""}
+              name={post.display_name || "Vincent Obenza"}
+              content={post.content}
+              img_url={post.image_url || ""}
+            />
           </div>
         ))
       ) : (
-        <p className="mt-10 text-center" aria-live="polite">
-          No posts available for viewing.
-        </p>
+        <div className="mt-12 flex flex-col items-center justify-center">
+          <Frown />
+          <p className="mt-4 text-center text-sm" aria-live="polite">
+            No posts available for viewing.{" "}
+            <span
+              onClick={() => window.location.reload()}
+              className="ml-1 text-sm text-indigo-600 dark:text-indigo-400 font-bold cursor-pointer underline"
+            >
+              Refresh Page
+            </span>
+          </p>
+        </div>
       )}
     </section>
   );

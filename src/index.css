@@ -18,9 +18,9 @@
   font-family: "Pacifico", cursive;
 }
 
-/* * {
+* {
   font-family: "Inria Sans", sans-serif;
-} */
+}
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
