@@ -70,7 +70,6 @@ export const MessagePanel = () => {
 
   return (
     <div className="w-full h-[86vh] bg-white dark:bg-slate-800 flex flex-col overflow-hidden ">
-      {/* Fixed header */}
       <div className="w-full border-b border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-800 shadow-md">
         <div className="w-full flex justify-between items-center p-4">
           <div className="flex items-center gap-4">
@@ -188,7 +187,6 @@ export const MessagePanel = () => {
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Fixed message input at bottom */}
       <div className="border-t border-gray-200 dark:border-slate-700 p-4 bg-gradient-to-t from-gray-50 to-transparent dark:from-slate-900 dark:to-transparent relative">
         <div className="flex items-center gap-2">
           <input

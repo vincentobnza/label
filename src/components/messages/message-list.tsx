@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Search } from "lucide-react";
 import { MessageFilter } from "./message-filter";
+import { OverlayFade } from "../overlay-fade";
 
 const mockContacts = [
   {
@@ -70,15 +71,14 @@ export const MessageList = () => {
 
   return (
     <div className="w-1/3 h-full flex flex-col relative">
-      <div className="absolute w-full bottom-0 left-0 h-8 bg-gradient-to-t from-slate-100 dark:from-slate-900 to-transparent pointer-events-none z-10"></div>
-      {/* Header with search */}
+      <OverlayFade />
       <div className="p-4 border-b border-slate-200 dark:border-slate-700">
         <h1 className="text-xl font-bold mb-4">Messages</h1>
         <div className="w-full flex items-center gap-2">
           <div className="w-full relative">
             <input
               type="text"
-              placeholder="Search conversations..."
+              placeholder="Search people..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-full bg-slate-100 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 rounded px-4 py-[7px] pl-10 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder:text-sm placeholder:font-semibold"

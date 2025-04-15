@@ -5,7 +5,7 @@ export const DotPatternCard = () => {
   return (
     <DotPattern
       className={cn(
-        "p-1 [mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] "
+        "p-2 [mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] "
       )}
     />
   );

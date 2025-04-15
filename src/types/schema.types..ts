@@ -1,5 +1,4 @@
 // supabase-types.ts
-
 export type Profile = {
   id: string;
   username: string;
@@ -13,7 +12,9 @@ export type Profile = {
 export type Post = {
   id: string;
   user_id: string;
+  display_name: string;
   content: string;
+  avatar_url?: string;
   image_url: string | null;
   created_at: string;
   updated_at: string;
