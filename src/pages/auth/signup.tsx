@@ -16,12 +16,12 @@ const HeroSection = () => (
       Connect, share, and discover with our community. Join thousands of users
       already enjoying Label.
     </p>
-    <div className="mt-10 w-3/4 bg-slate-700/30 p-4 rounded-lg backdrop-blur-sm">
+    <div className="mt-10 w-3/4 bg-slate-700/30 p-4 rounded backdrop-blur-sm">
       <p className="italic text-white/90">
         "Label has transformed how I connect with like-minded individuals. The
         platform is intuitive and engaging!"
       </p>
-      <p className="mt-6 font-semibold opacity-50">— Sarah Johnson</p>
+      <p className="mt-6 font-medium opacity-50">— Sarah Johnson</p>
     </div>
   </div>
 );

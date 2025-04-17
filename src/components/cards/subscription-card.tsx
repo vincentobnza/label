@@ -39,13 +39,13 @@ export const SubscriptionCard = ({
     >
       <DotPatternCard />
       {popular && (
-        <div className="absolute -top-3 right-6 bg-indigo-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+        <div className="absolute -top-3 right-6 bg-indigo-600 text-white text-xs font-medium px-3 py-1 rounded-full">
           Recommended
         </div>
       )}
 
       {currentPlan && (
-        <div className="absolute -top-3 left-6 bg-emerald-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+        <div className="absolute -top-3 left-6 bg-emerald-600 text-white text-xs font-medium px-3 py-1 rounded-full">
           Current Plan
         </div>
       )}
@@ -53,7 +53,7 @@ export const SubscriptionCard = ({
       <div className="mb-6">
         <div className="flex justify-between items-center mb-2">
           <h3
-            className={`text-lg font-bold ${
+            className={`text-lg font-semibold ${
               popular ? "text-indigo-700 dark:text-indigo-400" : ""
             }`}
           >

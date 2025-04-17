@@ -3,7 +3,7 @@ import { PaymentMethodCard } from "../cards/pm-card";
 export const PaymentMethod = () => {
   return (
     <div className="w-full">
-      <h1 className="text-xl font-bold mb-2">Payment Method</h1>
+      <h1 className="text-xl font-semibold mb-2">Payment Method</h1>
       <p className="text-sm opacity-70">
         Select a payment method to use for your subscription.
       </p>

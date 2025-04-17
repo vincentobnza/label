@@ -22,7 +22,7 @@ export const FollowRequestCard = ({
           </Avatar>
 
           <div className="flex flex-col gap-1">
-            <h1 className="text-sm font-semibold">{name}</h1>
+            <h1 className="text-sm font-medium">{name}</h1>
             <p className="text-xs opacity-50">{followers} followers</p>
           </div>
         </div>

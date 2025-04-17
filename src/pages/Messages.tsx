@@ -3,7 +3,7 @@ import { MessagePanel } from "@/components/messages/message-panel";
 
 export const Messages = () => {
   return (
-    <section className="w-full h-[86vh] max-w-screen-xl mx-auto flex rounded-lg overflow-hidden space-x-4">
+    <section className="w-full h-[86vh] max-w-screen-xl mx-auto flex rounded overflow-hidden space-x-4">
       <MessageList />
       <MessagePanel />
     </section>

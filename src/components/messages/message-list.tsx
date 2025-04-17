@@ -73,7 +73,7 @@ export const MessageList = () => {
     <div className="w-1/3 h-full flex flex-col relative">
       <OverlayFade />
       <div className="p-4 border-b border-slate-200 dark:border-slate-700">
-        <h1 className="text-xl font-bold mb-4">Messages</h1>
+        <h1 className="text-xl font-semibold mb-4">Messages</h1>
         <div className="w-full flex items-center gap-2">
           <div className="w-full relative">
             <input
@@ -81,7 +81,7 @@ export const MessageList = () => {
               placeholder="Search people..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full bg-slate-100 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 rounded px-4 py-[7px] pl-10 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder:text-sm placeholder:font-semibold"
+              className="w-full bg-slate-100 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-700 rounded px-4 py-[7px] pl-10 focus:outline-none focus:ring-2 focus:ring-indigo-500 placeholder:text-sm placeholder:font-medium"
             />
             <div className="absolute inset-y-0 w-3 grid place-items-center left-3">
               <Search className="h-4 w-4 text-slate-400" />
@@ -112,7 +112,7 @@ export const MessageList = () => {
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex justify-between items-center">
-                <h3 className="font-semibold truncate">{contact.name}</h3>
+                <h3 className="font-medium truncate">{contact.name}</h3>
                 <span className="text-xs text-slate-500">{contact.time}</span>
               </div>
               <p className="text-sm text-slate-500 truncate">

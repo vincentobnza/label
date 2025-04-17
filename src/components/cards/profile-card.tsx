@@ -17,7 +17,7 @@ export const ProfileCard = () => {
         </Avatar>
 
         <div className="flex flex-col gap-1">
-          <h1 className="text-md font-bold">Vincent Obenza</h1>
+          <h1 className="text-md font-semibold">Vincent Obenza</h1>
           <p className="text-xs opacity-70">Joined on 12th March 2025</p>
         </div>
       </div>

@@ -9,7 +9,7 @@ export const Subscription = () => {
       <div className="space-y-4">
         <div className="flex items-center gap-4 mb-2">
           <CreditCard strokeWidth={3} />
-          <h2 className="text-xl font-semibold">Subscription Details</h2>
+          <h2 className="text-xl font-medium">Subscription Details</h2>
         </div>
         <p className="text-sm opacity-80">
           Here you can manage your subscription details.

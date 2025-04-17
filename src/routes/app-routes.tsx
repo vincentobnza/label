@@ -2,28 +2,45 @@ import { createBrowserRouter } from "react-router-dom";
 import { lazy } from "react";
 import { Layout } from "@/layout/layout";
 import { MessageLayout } from "@/layout/message-layout";
-import { SubscriptionLayout } from "@/layout/subscription-layout";
 import { AuthLayout } from "@/layout/auth-layout";
-// import ProtectedRoute from "./private-route";
 import { RootLayout } from "@/layout/root-layout";
+import ProtectedRoute from "./private-route";
 
 const Login = lazy(() => import("@/pages/auth/login"));
 const Signup = lazy(() => import("@/pages/auth/signup"));
 const Home = lazy(() => import("@/pages/home"));
 const Messages = lazy(() => import("@/pages/messages"));
 const Subscription = lazy(() => import("@/pages/subscription"));
-
 const Explore = lazy(() => import("@/pages/explore"));
+const CommentsPage = lazy(() => import("@/pages/comments"));
 
 const router = createBrowserRouter([
   {
     path: "/feed",
-    element: <Layout />,
+    element: (
+      <ProtectedRoute>
+        <Layout />
+      </ProtectedRoute>
+    ),
     children: [
       {
         path: "",
         element: <Home />,
-        index: true,
+      },
+    ],
+  },
+
+  {
+    path: "/comment",
+    element: (
+      <ProtectedRoute>
+        <RootLayout />
+      </ProtectedRoute>
+    ),
+    children: [
+      {
+        path: ":id",
+        element: <CommentsPage />,
       },
     ],
   },
@@ -38,13 +55,21 @@ const router = createBrowserRouter([
       },
       {
         path: "billing",
-        element: <Subscription />,
+        element: (
+          <ProtectedRoute>
+            <Subscription />
+          </ProtectedRoute>
+        ),
       },
     ],
   },
   {
     path: "messages",
-    element: <MessageLayout />,
+    element: (
+      <ProtectedRoute>
+        <MessageLayout />
+      </ProtectedRoute>
+    ),
     children: [
       {
         path: "",

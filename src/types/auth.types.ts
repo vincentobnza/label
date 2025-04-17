@@ -5,6 +5,7 @@ export type AuthContextType = {
   session: Session | null;
   loading: boolean;
   error: string | null;
+  signInWithGoogle: () => Promise<void>;
 };
 
 export type AuthProviderProps = {

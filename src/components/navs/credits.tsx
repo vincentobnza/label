@@ -1,6 +1,6 @@
 export const Credits = () => {
   return (
-    <div className="h-8 flex justify-center items-center px-2 rounded text-slate-900 dark:text-white text-sm font-bold gap-3 ">
+    <div className="h-8 flex justify-center items-center px-2 rounded text-slate-900 dark:text-white text-sm font-semibold gap-3 ">
       <h1>Credits: </h1>
 
       <div className="flex items-center gap-2 text-green-700 dark:text-green-300">

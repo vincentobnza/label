@@ -18,10 +18,10 @@ export const PaymentMethodCard = ({
             ? "border-indigo-500 dark:border-indigo-600 ring-1 ring-indigo-500 dark:ring-indigo-400 bg-white dark:bg-indigo-900/20"
             : "border-slate-200 dark:border-slate-800 bg-white dark:bg-gradient-to-br dark:from-slate-800 dark:to-slate-900 "
         } 
-        rounded-lg shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer relative`}
+        rounded shadow-sm hover:shadow-md transition-all duration-200 cursor-pointer relative`}
     >
       {active && (
-        <div className="absolute -top-3 right-4 px-2 py-[1px] rounded text-xs font-bold bg-indigo-600 border border-indigo-300 dark:border-indigo-300 text-white z-10">
+        <div className="absolute -top-3 right-4 px-2 py-[1px] rounded text-xs font-semibold bg-indigo-600 border border-indigo-300 dark:border-indigo-300 text-white z-10">
           Active
         </div>
       )}

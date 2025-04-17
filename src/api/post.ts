@@ -8,7 +8,6 @@ export async function getPost(): Promise<Post[]> {
     .order("created_at", { ascending: false });
 
   if (error) throw new Error(error.message);
-
   return data as Post[];
 }
 
@@ -20,7 +19,6 @@ export async function getPostById(id: string): Promise<Post | null> {
     .single();
 
   if (error) throw new Error(error.message);
-
   return data as Post | null;
 }
 

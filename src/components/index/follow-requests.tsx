@@ -1,19 +1,19 @@
 import { FollowRequestCard } from "../cards/follow-request-card";
 import { OverlayFade } from "../theme/overlay-fade";
 import { Button } from "../ui/button";
-import { useQuery } from "@tanstack/react-query";
 
 export const FollowRequests = () => {
   return (
     <div className="w-full h-[400px] relative mb-5 border-b border-slate-200 dark:border-slate-800">
+      <OverlayFade height="7rem" />
+
       <div className="absolute inset-0 overflow-y-auto scrollbar-hide">
-        <OverlayFade height="7rem" position="bottom" />
         <div className="w-full p-6 text-slate-800 dark:text-slate-200">
           <div className="w-full flex justify-between items-center mb-8">
-            <h1 className="text-md font-bold">Follow Requests</h1>
+            <h1 className="text-md font-semibold">Follow Requests</h1>
 
             <Button
-              className="h-6 text-[11px] font-semibold text-indigo-400"
+              className="h-6 text-[11px] font-medium text-indigo-400"
               variant="link"
             >
               View more
@@ -36,7 +36,7 @@ export const FollowRequests = () => {
             </p>
             <Link
               to="/"
-              className="px-0 text-sm font-bold text-neutral-900 dark:text-indigo-400 hover:underline hover:bg-transparent"
+              className="px-0 text-sm font-semibold text-neutral-900 dark:text-indigo-400 hover:underline hover:bg-transparent"
             >
               Find people to follow
             </Link>

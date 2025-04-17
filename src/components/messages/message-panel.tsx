@@ -81,7 +81,7 @@ export const MessagePanel = () => {
               <AvatarFallback>VO</AvatarFallback>
             </Avatar>
             <div className="flex flex-col">
-              <h2 className="text-lg font-semibold text-gray-800 dark:text-white">
+              <h2 className="text-lg font-medium text-gray-800 dark:text-white">
                 Vincent Obenza
               </h2>
               <p className="text-xs text-gray-500 dark:text-slate-400">
@@ -93,21 +93,21 @@ export const MessagePanel = () => {
             <Button
               variant="secondary"
               size="icon"
-              className="p-1 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 "
+              className="p-1 rounded hover:bg-gray-200 dark:hover:bg-slate-700 "
             >
               <Phone strokeWidth={3} />
             </Button>
             <Button
               variant="ghost"
               size="icon"
-              className="p-1 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-700 "
+              className="p-1 rounded hover:bg-gray-200 dark:hover:bg-slate-700 "
             >
               <Video strokeWidth={3} />
             </Button>
             <Button
               variant="ghost"
               size="icon"
-              className="p-1 rounded-lg bg-slate-100 dark:bg-slate-600/40 hover:0g-gray-200 dark:hover:bg-slate-700"
+              className="p-1 rounded bg-slate-100 dark:bg-slate-600/40 hover:0g-gray-200 dark:hover:bg-slate-700"
             >
               <Info strokeWidth={3} />
             </Button>
@@ -144,7 +144,7 @@ export const MessagePanel = () => {
             >
               {!message.isMine && (
                 <div
-                  className={`font-semibold text-xs ${
+                  className={`font-medium text-xs ${
                     message.isMine
                       ? "text-white"
                       : "text-gray-700 dark:text-slate-300"

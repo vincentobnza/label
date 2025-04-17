@@ -31,7 +31,7 @@ export const OverlayFade: React.FC<GradientOverlayProps> = ({
 
   return (
     <div
-      className={`fixed ${positionClasses[position]} bg-gradient-to-${
+      className={`absolute ${positionClasses[position]} bg-gradient-to-${
         position === "top" || position === "bottom"
           ? "t"
           : position === "left"

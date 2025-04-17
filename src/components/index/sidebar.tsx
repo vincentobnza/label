@@ -54,14 +54,14 @@ const Sidebar = () => {
             key={item.path}
             to={item.path}
             className={({ isActive }) =>
-              `no-underline font-medium ${
+              `no-underline text-slate-900 dark:text-slate-200  ${
                 isActive ? "bg-slate-100 dark:bg-slate-800" : ""
               }`
             }
           >
             {({ isActive }) => (
               <div
-                className={`flex items-center gap-5 p-2 my-1 rounded cursor-pointer text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm ${
+                className={`flex items-center gap-5 p-2 my-1 rounded cursor-pointer text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs  ${
                   isActive
                     ? "bg-slate-100 dark:bg-gradient-to-r dark:from-slate-800 dark:to-slate-900"
                     : ""
@@ -92,14 +92,14 @@ const Sidebar = () => {
             key={item.path}
             to={item.path}
             className={({ isActive }) =>
-              `no-underline font-medium ${
+              `no-underline  ${
                 isActive ? "bg-slate-100 dark:bg-slate-800" : ""
               }`
             }
           >
             {({ isActive }) => (
               <div
-                className={`flex items-center gap-5 p-2 my-1 rounded cursor-pointer text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm relative ${
+                className={`flex items-center gap-5 p-2 my-1 rounded cursor-pointer text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs  relative ${
                   isActive
                     ? "bg-slate-100 dark:bg-gradient-to-r dark:from-slate-800 dark:to-slate-900"
                     : ""
@@ -130,14 +130,14 @@ const Sidebar = () => {
             key={item.path}
             to={item.path}
             className={({ isActive }) =>
-              `no-underline font-medium ${
+              `no-underline  ${
                 isActive ? "bg-slate-100 dark:bg-slate-800" : ""
               }`
             }
           >
             {({ isActive }) => (
               <div
-                className={`flex items-center gap-5 p-2 my-1 rounded cursor-pointer text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 text-sm ${
+                className={`flex items-center gap-5 p-2 my-1 rounded cursor-pointer text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 text-xs  ${
                   isActive
                     ? "bg-slate-100 dark:bg-gradient-to-r dark:from-slate-800 dark:to-slate-900"
                     : ""
