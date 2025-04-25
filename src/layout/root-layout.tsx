@@ -8,7 +8,9 @@ export function RootLayout() {
   const location = useLocation();
 
   const isIndexPage =
-    location.pathname === "/billing" || location.pathname === "/explore";
+    location.pathname === "/billing" ||
+    location.pathname === "/explore" ||
+    location.pathname === "/notifications";
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-slate-900">
       <Navbar />

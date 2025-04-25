@@ -13,6 +13,7 @@ const Messages = lazy(() => import("@/pages/messages"));
 const Subscription = lazy(() => import("@/pages/subscription"));
 const Explore = lazy(() => import("@/pages/explore"));
 const CommentsPage = lazy(() => import("@/pages/comments"));
+const Notifications = lazy(() => import("@/pages/notifications"));
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
       {
         path: "explore",
         element: <Explore />,
+      },
+      {
+        path: "notifications",
+        element: <Notifications />,
       },
       {
         path: "billing",

@@ -51,7 +51,7 @@ const DUMMY_FOLLOW_REQUESTS = [
   {
     img_url:
       "https://tse3.mm.bing.net/th?id=OIP.WpIMP_W3gb5bZ81rA-K2YgHaHa&pid=Api&P=0&h=220",
-    name: "Cathy B. Latco",
+    name: "Rick Tenorio",
     followers: 1200,
   },
   {
