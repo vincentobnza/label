@@ -1,7 +1,7 @@
-import { PostCard } from "../cards/post-card";
+import { PostCard } from "../../cards/post-card";
 import { usePosts } from "@/hooks/usePosts";
 import { Frown } from "lucide-react";
-import { SkeletonLoading } from "../utility/skeleton";
+import { SkeletonLoading } from "../../utility/skeleton";
 import { useState } from "react";
 
 export const PostList = () => {

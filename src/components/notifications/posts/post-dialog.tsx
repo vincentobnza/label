@@ -9,12 +9,12 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import { Badge } from "../ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "../../ui/avatar";
+import { Badge } from "../../ui/badge";
 import { useAutoResizeTextarea } from "@/hooks/useAutoResizeTextArea";
 import { Image, Loader2 } from "lucide-react";
 import { toast } from "sonner";
-import { PostReducers } from "../../reducers/post-reducers";
+import { PostReducers } from "../../../reducers/post-reducers";
 import { useCreatePost } from "@/hooks/usePosts";
 import { useAuth } from "@/context/auth-context";
 
@@ -24,7 +24,7 @@ export function PostDialog() {
   const [postContent, setPostContent] = useState<string>("");
   const textareaRef = useAutoResizeTextarea();
   const [showPictureCard, setShowPictureCard] = useState<boolean>(false);
-  const [state, dispatch] = useReducer(PostReducers, {
+  const [, dispatch] = useReducer(PostReducers, {
     posts: [],
   });
 

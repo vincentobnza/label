@@ -1,7 +1,7 @@
-import { Button } from "../ui/button";
+import { Button } from "../../ui/button";
 import { Send } from "lucide-react";
-import { Input } from "../ui/input";
-import { AvatarComponent } from "../shared/avatar";
+import { Input } from "../../ui/input";
+import { AvatarComponent } from "../../shared/avatar";
 import { useInputFocus } from "@/hooks/useInputFocus";
 
 export const PostComment = ({ name }: { name: string }) => {

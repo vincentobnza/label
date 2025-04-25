@@ -1,5 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { PostDialog } from "../posts/post-dialog";
+import { PostDialog } from "../notifications/posts/post-dialog";
 import { Button } from "../ui/button";
 import { Image, SmilePlus, Headset, Video } from "lucide-react";
 import { useAuth } from "@/context/auth-context";
@@ -24,9 +24,15 @@ export const Header = () => {
 const ActionButton = () => {
   const actions = [
     { icon: <Image className="text-green-400" />, text: "Photo / Memories" },
-    { icon: <SmilePlus className="text-amber-400" />, text: "Feelings / Emotions" },
+    {
+      icon: <SmilePlus className="text-amber-400" />,
+      text: "Feelings / Emotions",
+    },
     { icon: <Video className="text-rose-400" />, text: "Video Clip" },
-    { icon: <Headset className="text-indigo-400" />, text: "Listening to Music" },
+    {
+      icon: <Headset className="text-indigo-400" />,
+      text: "Listening to Music",
+    },
   ];
 
   return (

@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/dialog";
 
 import { EllipsisVertical, MessageCircle } from "lucide-react";
-import { AvatarComponent } from "../shared/avatar";
+import { AvatarComponent } from "../../shared/avatar";
 export function CommentDialog({
   id,
   name,

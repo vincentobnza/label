@@ -63,7 +63,7 @@ const mockContacts = [
 
 export const MessageList = () => {
   const [search, setSearch] = useState("");
-  const [contacts, setContacts] = useState(mockContacts);
+  const [contacts, _] = useState(mockContacts);
 
   const filteredContacts = contacts.filter((contact) =>
     contact.name.toLowerCase().includes(search.toLowerCase())

@@ -1,18 +1,11 @@
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
 import { Button } from "../ui/button";
-import {
-  EllipsisVertical,
-  ThumbsUp,
-  MessageCircle,
-  Rss,
-  Bookmark,
-} from "lucide-react";
+import { EllipsisVertical, ThumbsUp, Rss, Bookmark } from "lucide-react";
 import TimeAgo from "timeago-react";
 import React from "react";
 import { useCommentCount } from "@/hooks/useComments";
-import { PostComment } from "../posts/post-comment";
-import { CommentDialog } from "../posts/post-comment-modal";
-import { useParams } from "react-router-dom";
+import { PostComment } from "../notifications/posts/post-comment";
+import { CommentDialog } from "../notifications/posts/post-comment-modal";
 
 type PostCardProps = {
   id?: string;

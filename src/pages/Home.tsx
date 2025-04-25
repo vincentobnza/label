@@ -1,4 +1,4 @@
-import { PostList } from "@/components/posts/post-list";
+import { PostList } from "@/components/notifications/posts/post-list";
 
 export const Home = () => {
   return (
